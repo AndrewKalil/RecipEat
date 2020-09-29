@@ -1,0 +1,18 @@
+$size: 100%;
+html {
+    height: 100%;
+}
+body {
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    .container {
+        width: $size;
+        margin: 10px;
+        padding-bottom: 30px;
+        background-color: green;
+    }
+}
+
+@import "components/header-styles";
+@import "components/body-styles";

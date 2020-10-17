@@ -1,0 +1,205 @@
+.myRpage {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    margin: 0;
+}
+
+.myCardDeck {
+    align-content: center;
+    padding-top: 20px; padding-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    -webkit-display: box;
+    -moz-display: box;
+    -ms-display: flexbox;
+    -webkit-display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+/*-----------------------------------------THE CARD ITSELF------------------------------------*/
+
+.myRcard {
+    height: 430px;
+    width: 340px;
+    background-color: lavender;
+    margin: 35px 30px 35px 30px;
+    position: relative;
+    transition: transform 0.7s;
+    border-radius: 10px;
+    box-shadow: 0 10px 35px rgb(129, 119, 119),0 2px 15px rgba(0,0,0,.07);
+    padding: 7px 7px 10px 7px;
+    display: flexbox;
+
+}
+
+.myRcard:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.myRcardImg {
+    width: 100%;
+    margin: auto;
+    height: 200px;
+    background-color: lightseagreen;
+    border-radius: 10px;
+}
+
+.myRcardTitleandClock{
+    display: flex;
+    width: 100%;
+    align-content: center;
+}
+
+.myRcardTitle {
+    background-color: inherit;
+    margin-left: 55px;
+    margin-top: 5px;
+    width: 210px;
+    height: 25px;
+    align-content: center;
+    text-align: center;
+}
+
+.myRcardTitle > p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+.myClock {
+    height: 30px;
+    width: 30px;
+    background-image: url("https://www.flaticon.com/svg/static/icons/svg/154/154448.svg");
+    margin-left: 25px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.myClock > div {
+    height: 18px;
+    width: 40px;
+    margin: auto;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    padding-right: 9px;
+}
+
+.myRcardText {
+    height: 110px;
+    width: 100%;
+    padding: 7px 10px 7px 10px;
+    margin-top: 12px;
+}
+
+.myRcardText > p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13px;
+}
+
+.myRcardButton {
+    width: 25%;
+    margin: auto;
+    margin-top: 15px;
+    background-color: lightblue;
+    height: 10%;
+    align-content: center;
+    text-align: center;
+    padding-top: 6px;
+    border-radius: 5px;
+}
+
+.myRcardButton > p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+/*_______________________________________END OF CARD____________________________________*/
+
+
+
+
+
+
+
+/*------------------------------------ONE I FOUND ONLINE----------------------------------*/
+
+.container {
+  display: flex;
+  -webkit-display: box;
+  -moz-display: box;
+  -ms-display: flexbox;
+  -webkit-display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+/*______________________________________END___________________________________________*/
+
+
+.search-form {
+    width: 60rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3d3d3;
+    border-radius: 0.5rem;
+    margin-bottom: 5rem;
+    box-shadow: 1rem 2rem 5rem #aaa;
+    position: relative;
+}
+
+.search-form input {
+    font-size: 1.6rem;
+    border: none;
+    border-bottom: 0.1rem solid #ccc;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    height: 3rem;
+}
+
+.search-form input[type="text"] {
+    padding: 0 0.5rem;
+    width: 60%;
+    color: #555;
+}
+
+.search-form input[type="submit"] {
+    width: 25%;
+    text-transform: uppercase;
+    background-color: #40b48e;
+    color: #fff;
+}
+
+.formDiv {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+}
+
+.buttonSection {
+    margin-bottom: 0;
+    justify-content: center;
+    display: flex;
+}
+
+.buttonSection > button {
+    height: 20px;
+    width: 50px;
+}

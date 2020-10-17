@@ -1,0 +1,167 @@
+.myHeader {
+    height: 750px;
+    position: absolute;
+    background-color: rgb(238, 172, 74);
+    width: 100%;
+    text-align: justify;
+    z-index: 1;
+    padding-top: 100px;
+}
+
+.myAboutUs {
+    width: 95%;
+    margin: auto;
+    background-image: linear-gradient(to bottom, white, rgb(238, 172, 74), white);
+    position: relative;
+    z-index: 2;
+    top: 650px;
+}
+
+.myContent {
+    width: 70%;
+    margin: auto;
+}
+
+.myTitles {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+}
+
+/* -------------------------THIS IS THE CSS FOR MY FLIPPING CARDS ---------------------------*/
+
+.myCardDeck {
+    align-content: center;
+    padding-bottom: 20px;
+    width: 100%;
+    justify-content: center;
+    padding-left: 40px;
+}
+
+.aboutUsh1 {
+    text-align: center;
+    padding-bottom: 20px;
+    align-content: center;
+    justify-content: center;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .containerCard {
+        position: relative;
+        z-index: 1;
+        width: 10%;
+        height: 15%;
+        perspective: 1000px;
+        display: flex;
+        padding: 15px 15px 15px 15px;
+    }
+}
+
+.containerCard {
+    position: relative;
+    z-index: 1;
+    width: 240px;
+    height: 290px;
+    perspective: 1000px;
+    display: flex;
+    padding: 15px 15px 15px 15px;
+}
+
+.c-body {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all .7s linear;
+}
+
+img {
+    width: 100%;
+    max-height: 80%;
+    background-color: white;
+}
+
+.containerCard:hover .c-body {
+    transform: rotateY(180deg);
+}
+
+.containerCard:hover > .c-body > .front {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in, visibility .75s linear;
+}
+
+.card-side {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    color: #212121;
+    backface-visibility: hidden;
+    box-shadow: 0 10px 35px rgba(50,50,93,.1),0 2px 15px rgba(0,0,0,.07);
+}
+
+.front {
+    padding-left: 0;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.back-text {
+    padding: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: center;
+    text-align: center;
+    font-size: small;
+}
+
+/*- Back side -*/
+.back {
+    z-index: 2;
+    text-align: center;
+    transform: rotateY(180deg);
+    background-color: white;
+    border-radius: 10px;
+}
+
+.myLinks {
+    height: 55px;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    padding: 5px 10px 5px 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.linkLogos {
+    height: 25px;
+    width: 25px;
+    margin: 0px 6px 0px 6px;
+}
+
+myDescription {
+    height: 100%;
+}
+
+.name-position {
+    background-color: beige;
+    height: 100%;
+    justify-content: center;
+}
+
+.front-text {
+    text-align: center;
+    font-size: large;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.fig {
+    height: 100%;
+}
+/*_______________________THIS IS THE END OF THE FLIPPING CARDS CSS____________________________*/
+
+

@@ -1,0 +1,229 @@
+$size: 100%;
+$color: #ffff;
+$font-size: 16px;
+$font: "Sofia", Serif;
+$shadow: 0 2px 2px 0 rgba(70, 69, 69, 0.37);
+@import url('https://fonts.googleapis.com/css?family=Sofia');
+
+
+nav {
+    background-color: #f2af58;
+    padding: 5px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.37);
+    font-family: $font;
+    font-weight: bold;
+    font-size: 20px;
+}
+    .navBar {
+        display: flex;
+        justify-content: space-around;
+        height: 45px;
+        line-height: 50px;
+        margin: 10px 0px 10px;
+        align-items: center;
+        .log-url {
+            display: flex;
+            justify-content: center;
+        }
+        .logo {
+            width: 40px;
+            border-radius: 50%;
+            background-color: $color;
+            align-items: center;
+            box-shadow: $shadow;
+        }
+        .search {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            flex: 0.5 1 auto;
+            .nav-box {
+                padding: 0 4px 0 16px;
+                height: $size;
+                position: relative;
+                background-color: #efefef;
+                line-height: 48px;
+                display: flex;
+                align-items: center;
+                border-radius: 24px;
+                box-sizing: border-box;
+                flex: 1 1 auto;
+                box-shadow: $shadow;
+            }
+            .box-ico {
+                margin-right: 8px;
+                flex: 0 0 auto;
+                box-sizing: border-box;
+                height: $size;
+            }
+            .ico-search {
+                display: block;
+                color: #767676;
+                fill: currentColor;
+                stroke-width: 0;
+            }
+        }
+        .input-search {
+            background-color: transparent;
+            border: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: normal;
+            outline: none;
+            padding: 0;
+            margin: 0;
+            width: $size;
+            height: 50px;
+        }
+        .sear-in {
+            height: $size; 
+            flex: 1 1 auto; 
+            box-sizing: border-box;
+        }
+        
+    }
+
+.nav-Items {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    overflow: hidden;                        
+    margin: 0;
+    li {
+        text-decoration-style: none;
+        border-radius: 24px;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+}
+.items {
+    text-decoration: none;
+    color: #767676;
+    border-radius: 24px;
+    padding: 8px 10px;
+    a {
+        color: #333;
+        text-decoration: none;
+    }
+}
+.items:hover {
+    background-color: #efefef;
+    box-shadow: $shadow;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    padding: 8px 10px;
+    width: 100px;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "Sofia";
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    background-color: #3acbf7;
+    color: #767676;
+    border: none;
+    box-shadow: 0 3px 2px 0 rgba(70, 69, 69, 0.37);
+} 
+.btn:hover {
+    padding: 8px 10px;
+    transition: all 0.3s ease-out;
+    background: $color;
+    color: #3acbf7;
+    transition: 250ms;
+}
+@media screen and (max-width: 960px) {
+    nav {
+        position: relative;
+    }
+    .nav-Items {
+        display: flex;
+        flex-direction: column;
+        width: $size;
+        height: auto;
+        position: absolute;
+        top: 75px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+    .nav-Items.active {
+        background-color:#f2af58;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+    .search {
+        display: flex;
+        width: 150px;
+        position: relative;
+        padding-right: 10px;
+        padding-left: 10px;
+        transform: translate(-7%, 0%);
+    }
+    .items {
+        text-align: center;
+        border-radius: 24px;
+        padding: 8px 10px;
+        width: $size;
+    }
+    .items:hover {
+        background-color: #efefef;
+    }
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(25%, 50%);
+    }
+    .menu-icon {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-80%, 70%);
+        font-size: 1.8rem;
+        cursor: pointer;
+        justify-content: center;
+    }
+    .fa-times, .fa-bars{
+        color: #767676;
+        font-size: 2rem;
+    }
+
+    .btn {
+        display: block;
+        text-align: center;
+        padding: 8px 10px;
+        width: 80%;
+        border-radius: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        font-family: "Sofia";
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px;
+        background-color: #3acbf7;
+        color: #767676;
+        border: none;
+    } 
+    .btn:hover {
+        padding: 8px 10px;
+        transition: all 0.3s ease-out;
+        background: $color;
+        color: #3acbf7;
+        transition: 250ms;
+    }
+
+}

@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from  "react-router-dom";
-import Header from './Header';
-import Home from './Home';
-import Reciped from './recip';
+import Header from './components/Header';
+import Home from './components/Home';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -12,9 +12,12 @@ function App() {
           <Route path="/home">
             <Header />
             <Home />
+            <Footer />
           </Route>
           <Route path="/">
-            <Reciped />
+            <Header />
+            <Home />
+            <Footer />
           </Route>
         </Switch>
       </div>

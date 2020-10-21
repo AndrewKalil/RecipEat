@@ -1,0 +1,57 @@
+
+.animation-mouse {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+
+  .mouse {
+    width: 28px;
+    height: 50px;
+    border: 2px solid #ecf0f1;
+    margin: 0 auto;
+    border-radius: 30px;
+    .mouse-wheel {
+      overflow: hidden;
+      margin-top: 5px;      
+      span {
+        display: block;
+        margin: 5px auto;
+        width: 5px;
+        height: 5px;
+        &.wheel {
+          border: 2px solid #ecf0f1;
+          border-radius: 5px;
+          width: 0;
+        }
+        &.arrow {
+          border-bottom: 2px solid #ecf0f1;
+          border-right: 2px solid #ecf0f1;
+          transform: rotate(45deg);
+          animation: scrollDown {
+            duration: 1.7s;
+            iteration-count: infinite;
+            timing-function: ease-in-out;
+          }
+        }          
+      }
+    }
+  }
+}
+@keyframes scrollDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(5px) rotate(45deg);
+  }
+  75% {
+    opacity: 0;
+    transform: translateY(0) rotate(45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(45deg);
+  }
+}

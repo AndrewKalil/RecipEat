@@ -1,0 +1,187 @@
+html {
+  height: 100%;
+  overflow: hidden; }
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  margin: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  user-select: none; }
+  body .container {
+    margin: 10px 0px 10px 0px;
+    padding-bottom: 30px;
+    background-color: green;
+    scroll-behavior: smooth; }
+
+.fr {
+  display: flex;
+  flex-direction: row; }
+
+nav {
+  background-color: #f2af58;
+  padding: 5px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.37); }
+  nav .navBar {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    height: 45px;
+    line-height: 50px;
+    margin: 0px 0px 10px; }
+    nav .navBar .logo {
+      width: 40px;
+      border-radius: 50%;
+      background-color: #ffff; }
+    nav .navBar .search {
+      padding: 0 4px 4px 16px;
+      border-radius: 24px;
+      height: 100%;
+      position: relative;
+      background-color: #efefef; }
+      nav .navBar .search .box-search {
+        padding: 0 4px 0 16px;
+        height: 100%;
+        position: relative;
+        background-color: #efefef;
+        border-radius: 24px;
+        flex: 1 1 auto;
+        min-width: 0;
+        max-width: 0;
+        align-items: center;
+        box-sizing: border-box; }
+      nav .navBar .search .ico-search {
+        display: block;
+        color: #767676;
+        fill: currentColor;
+        stroke-width: 0; }
+      nav .navBar .search .sear-in {
+        height: 100%;
+        flex: 1 1 auto;
+        min-width: 0;
+        max-width: 0;
+        box-sizing: border-box; }
+      nav .navBar .search .input-search {
+        background-color: transparent;
+        border: none;
+        color: #333;
+        font-size: 16px;
+        font-weight: normal;
+        height: 100%;
+        outline: none;
+        padding: 0;
+        width: 100%; }
+    nav .navBar .nav-Items {
+      list-style-type: none;
+      overflow: hidden;
+      padding: 0;
+      margin: 0; }
+      nav .navBar .nav-Items li {
+        text-decoration-style: none;
+        display: inline; }
+        nav .navBar .nav-Items li .items {
+          text-align: center;
+          text-decoration: none;
+          padding: 14px 16px; }
+
+.box-slides {
+  display: flex;
+  width: 100%;
+  background-color: green; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+#main-scroolbar {
+  width: auto;
+  height: 100vh;
+  overflow: auto;
+  margin: 0; }
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-color: #eeecec;
+  padding-bottom: 20px; }
+
+.info-footer {
+  color: #ff4f03;
+  width: 50%;
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  margin: 20px; }
+  .info-footer p {
+    color: #e29a59; }
+
+.net-footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%; }
+  .net-footer .net-developer img {
+    width: 100%; }
+  .net-footer .net {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .net-footer .net a {
+      align-items: center;
+      justify-content: center;
+      width: 10%;
+      display: flex; }
+      .net-footer .net a img {
+        margin-bottom: 20px;
+        width: 100%; }
+
+.animation-mouse {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto; }
+  .animation-mouse .mouse {
+    width: 28px;
+    height: 50px;
+    border: 2px solid #ecf0f1;
+    margin: 0 auto;
+    border-radius: 30px; }
+    .animation-mouse .mouse .mouse-wheel {
+      overflow: hidden;
+      margin-top: 5px; }
+      .animation-mouse .mouse .mouse-wheel span {
+        display: block;
+        margin: 5px auto;
+        width: 5px;
+        height: 5px; }
+        .animation-mouse .mouse .mouse-wheel span.wheel {
+          border: 2px solid #ecf0f1;
+          border-radius: 5px;
+          width: 0; }
+        .animation-mouse .mouse .mouse-wheel span.arrow {
+          border-bottom: 2px solid #ecf0f1;
+          border-right: 2px solid #ecf0f1;
+          transform: rotate(45deg);
+          animation: scrollDown;
+            animation-duration: 1.7s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out; }
+
+@keyframes scrollDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(45deg); }
+  50% {
+    opacity: 0;
+    transform: translateY(5px) rotate(45deg); }
+  75% {
+    opacity: 0;
+    transform: translateY(0) rotate(45deg); }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(45deg); } }
+
+/*# sourceMappingURL=styles.css.map */

@@ -15,6 +15,10 @@ class DetailRecipe extends React.Component {
         history.push('/')
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
     render () {
         const {tData} = this.props.location
 
@@ -43,7 +47,6 @@ class DetailRecipe extends React.Component {
                     </div>
                     <div className="dPageInsClock">
                         {/* <Timer/> */}
-
                     </div>
                 </div>
 

@@ -11,6 +11,12 @@ class Content extends React.Component {
             info: InfoJason
         }
     }
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
+
     render() {
         const inf = this.state.info.map(pInfo => <FlipCard
             id={pInfo.id}

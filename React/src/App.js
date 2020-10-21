@@ -1,25 +1,21 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from  "react-router-dom";
-import Header from './components/Header';
-import Home from './components/Home';
-import Footer from './components/Footer';
+import Header from './Header';
+import Home from './Home';
+import Footer from './Footer';
+import AboutUs from './AboutUs';
+import ResPage from "./ResPage";
+import DetailRecipe from "./DetailRecipe.js";
+import './css/myAboutUs.css';
+import Container from './Container';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Switch>
-          <Route path="/home">
-            <Header />
-            <Home />
-            <Footer />
-          </Route>
-          <Route path="/">
-            <Header />
-            <Home />
-            <Footer />
-          </Route>
-        </Switch>
+        <Header />
+        <Container />
+        <Footer />
       </div>
     </Router>
   );

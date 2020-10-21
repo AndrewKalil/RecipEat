@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import '../css/myAboutUs.css';
 
 let twitterLogo = "https://www.flaticon.com/svg/static/icons/svg/733/733579.svg"
 let linkedinLogo = "https://www.flaticon.com/svg/static/icons/svg/174/174857.svg"

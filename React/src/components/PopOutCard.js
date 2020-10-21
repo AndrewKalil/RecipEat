@@ -1,8 +1,5 @@
 import React from "react"
-import { CardDeck } from "react-bootstrap"
-import exampleFood from "../images/exampleFood.jpg"
-
-const clock = "https://www.flaticon.com/svg/static/icons/svg/154/154448.svg"
+import {Link} from "react-router-dom"
 
 class PopOutCard extends React.Component {
     render() {
@@ -14,6 +11,7 @@ class PopOutCard extends React.Component {
                 <div className="myRcardTitleandClock">
                     <div className="myRcardTitle">
                         <p>{this.props.label}</p>
+                        <p>by: {this.props.source}</p>
                     </div>
                     <div className="myClock">
                         <div>{this.props.time}</div>
@@ -23,7 +21,12 @@ class PopOutCard extends React.Component {
                     <p>{this.props.text}</p>
                 </div>
                 <div className="myRcardButton">
-                    <p>Go!</p>
+                    <Link to={{
+                        pathname: '/detail',
+                        tData: this.props
+                    }}>
+                        <p>Ir!</p>
+                    </Link>
                 </div>
             </div>
         )

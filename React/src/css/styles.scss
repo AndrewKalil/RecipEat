@@ -1,0 +1,37 @@
+$size: 100%;
+$ty-display: flex;
+
+html {
+    height: $size;
+}
+body {
+    position: relative;
+    margin: 0;
+    margin: 0;
+	padding: 0;
+	background-color: #eee;
+    user-select: none;
+    .container {
+        scroll-behavior: smooth;
+        overflow: hidden;
+        display: $ty-display;
+        flex-direction: column;
+        min-height: 100vh;
+        padding: 2rem;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.fr {
+    display: $ty-display;
+    flex-direction: row;
+}
+
+@import "components/header-styles";
+@import "components/home-styles";
+@import "components/footer-styles";
+@import "components/animations-styles";
+@import "components/button-styles";

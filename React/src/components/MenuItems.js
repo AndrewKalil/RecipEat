@@ -1,12 +1,17 @@
 const MenuItems = [
     {
         title: 'Home',
-        url: '#',
+        url: '/',
         cName: 'items'
     },
     {
         title: 'about us',
-        url: '#',
+        url: '/about',
+        cName: 'items'
+    },
+    {
+        title: 'Searching',
+        url: '/respage',
         cName: 'items'
     }
 ];

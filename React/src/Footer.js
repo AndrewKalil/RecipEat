@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import kitchen from '../assets/img/kitchen.png';
-import logo from '../assets/img/recipEat.png';
-import '../css/styles.scss';
+import kitchen from './assets/img/kitchen.png';
+import logo from './assets/img/recipEat.png';
+import './css/styles.scss';
 
-class Footer extends React.Component {
+class Footer extends Component {
   render () {
     return (
     <div className="footer">

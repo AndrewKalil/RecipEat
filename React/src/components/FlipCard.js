@@ -4,13 +4,24 @@ import '../css/myAboutUs.css';
 let twitterLogo = "https://www.flaticon.com/svg/static/icons/svg/733/733579.svg"
 let linkedinLogo = "https://www.flaticon.com/svg/static/icons/svg/174/174857.svg"
 let githubLogo = "https://www.flaticon.com/premium-icon/icons/svg/3291/3291695.svg"
+let emailLogo = "https://www.flaticon.com/svg/static/icons/svg/646/646135.svg"
 
 class CardBack extends React.Component {
     render() {
+        const color = this.props.info.member === "Front-End" ? "royalblue" : "palevioletred"
         return(
             <div className='card-side back'>
                 <div className="myDescription">
-                    <p className='back-text'>{this.props.info.text}</p>
+                    <p className='back-text'><b>Name:</b> {this.props.info.fullName}</p>
+                    <p className='back-text'><b>Especialities:</b> {this.props.info.especialities}</p>
+                    <p className='back-text'><b>Education:</b> {this.props.info.education}</p>
+                    <p
+                        className='back-text'
+                        style={{color: color, fontWeight: "bolder"}}
+
+                    >
+                        <b>Member:</b>      {this.props.info.member}
+                    </p>
                 </div>
                 <div className="myLinks">
                     <a
@@ -33,6 +44,14 @@ class CardBack extends React.Component {
                         href={this.props.info.github}>
                         <img
                             src={githubLogo}
+                            alt=""
+                            className="linkLogos"
+                        />
+                    </a>
+                    <a
+                        href={this.props.info.email}>
+                        <img
+                            src={emailLogo}
                             alt=""
                             className="linkLogos"
                         />

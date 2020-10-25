@@ -21,6 +21,7 @@
 .dPageTitle > h1{
     margin-top: 50px;
     font-family: "Sofia";
+    color: black;
 }
 
 .dPageTitle > h4{
@@ -44,7 +45,7 @@
     min-width: 450px;
     max-width: 850px;
     justify-content: center;
-    align-content: center;
+    align-self: center;
     border-style: solid;
     border-width: 3px;
     border-color: darkcyan;
@@ -52,16 +53,17 @@
 }
 
 .dPageIngredients{
-    margin-top: 10px;
     min-height: 80%; height: 100%;
-    min-width: 400px; width: 30%;
+    min-width: 400px; width: 28%;
     border-radius: 20px;
     padding-top: 25px; padding-bottom: 25px;
-    padding-left: 25px; padding-right: 25px;
+    padding-left: 55px; padding-right: 25px;
     border-style: solid;
     border-width: 2px;
     border-color: darkcyan;
     align-self: center;
+    background-image: url("https://img.freepik.com/free-photo/seamless-wood-texture-background_105762-62.jpg?size=626&ext=jpg");
+    margin-top: 10px; margin-bottom: 10px;
 }
 
 .dPageIngredients > ul{
@@ -69,9 +71,13 @@
     align-items: center;
     list-style: disc;
     font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: larger;
     justify-content: center;
+}
+
+.dPageIngredients > ul > li {
+    color: black;
+    font-weight: bolder;
+    font-size: x-large;
 }
 
 .dPageInstructions{
@@ -90,3 +96,23 @@
 .dPageInsClock{
 
 }
+
+/*---------------------------------------------------------------task--------------------------------------------------*/
+
+.my-todo-component {
+	max-width: 500px;
+	margin: auto;
+	padding: 1rem;
+	background: #eee;
+	border-radius: 5px;
+	box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.32);
+}
+
+.my-todo-component ul {
+	margin: 0;
+	padding: 0;
+}
+.my-todo-component .close{
+	color: red;
+}
+/* ______________________________________________________________END____________________________________________________ */

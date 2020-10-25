@@ -1,58 +1,39 @@
-import React from 'react';
-import history from './history';
+import React, {useEffect, useState} from 'react';
 import './css/myDetailRecipe.css';
-//import Timer from './Components/Timer'
+// import Countdown from './components/Timer'
+// import TodoQueue from './components/TodoQueue'
 
-class DetailRecipe extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-        }
-        this.handleGoBack = this.handleGoBack.bind(this)
-    }
 
-    handleGoBack() {
-        history.push('/')
-    }
+function DetailRecipe(props) {
 
-    componentDidMount() {
-        window.scrollTo(0, 0)
-    }
+    const tData = JSON.parse(localStorage.getItem('tData'))
 
-    render () {
-        const {tData} = this.props.location
-
-        return (
-            <div className="myContainer">
-                <div className="goBack">
-                        <button onClick={this.handleGoBack}>
-                            Back
-                        </button>
-                </div>
-                <div className="dPageTitle">
-                    <h1>{tData.label}</h1>
-                    <h4>Owner: {tData.source}</h4>
-                </div>
-                <div className="dPageImg-ingredients">
-                    <img className="dPageImage" src={tData.img} alt=""/>
-                    <div className="dPageIngredients">
-                        <ul>
-                            {tData.ingredients.map(list => <li>{list}</li>)}
-                        </ul>
-                    </div>
-                </div>
-                <div className="dPageInstructions">
-                    <div className="dPageInsText">
-
-                    </div>
-                    <div className="dPageInsClock">
-                        {/* <Timer/> */}
-                    </div>
-                </div>
-
+    return (
+        <div className="myContainer">
+            <div className="dPageTitle">
+                <h1>{tData.label}</h1>
+                <h4>Owner: {tData.source}</h4>
             </div>
-        )
-    }
+            <div className="dPageImg-ingredients">
+                <img className="dPageImage" src={tData.image} alt=""/>
+                <div className="dPageIngredients">
+                    <ul>
+                        {tData.ingredients.map((list, index) => <li key={index}>{list}</li>)}
+                    </ul>
+                </div>
+            </div>
+            <div className="dPageInstructions">
+                <div className="dPageInsText">
+
+                </div>
+                <div className ="dPageInsClock">
+                    {/* <Countdown
+                        time={tData.totalTime}/> */}
+                </div>
+            </div>
+
+        </div>
+    )
 }
 
 export default DetailRecipe;

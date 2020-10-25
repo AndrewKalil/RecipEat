@@ -1,6 +1,6 @@
 import React from "react";
 import FlipCard from "./components/FlipCard";
-import {CardDeck, Jumbotron} from "react-bootstrap";
+import {CardDeck} from "react-bootstrap";
 import InfoJason from "./components/InfoJason";
 import './css/myAboutUs.css';
 
@@ -18,26 +18,48 @@ class Content extends React.Component {
 
 
     render() {
-        const inf = this.state.info.map(pInfo => <FlipCard
-            id={pInfo.id}
-            name={pInfo.name}
-            text={pInfo.text}
-            img={pInfo.image}
-            twitter={pInfo.twitter}
-            linkedin={pInfo.linkedin}
-            github={pInfo.github}
-            email={pInfo.email}/>)
+        const front = this.state.info.slice(0, 3).map((item, index) =>
+            <FlipCard
+                key={index}
+                name={item.name}
+                text={item.text}
+                img={item.image}
+                twitter={item.twitter}
+                linkedin={item.linkedin}
+                github={item.github}
+                email={item.email}
+                member={item.member}
+                especialities={item.especialities}
+                education={item.education}
+                fullName={item.fullName}
+                />
+            )
+        const back = this.state.info.slice(3, 5).map((item, index) =>
+            <FlipCard
+                key={index}
+                name={item.name}
+                text={item.text}
+                img={item.image}
+                twitter={item.twitter}
+                linkedin={item.linkedin}
+                github={item.github}
+                email={item.email}
+                member={item.member}
+                especialities={item.especialities}
+                education={item.education}
+                fullName={item.fullName}
+                />
+            )
         return (
-            <div>
+            <div className="aboutPage">
                 <div className="myHeader">
-                    <h1 className="aboutUsh1">About us</h1>
-                    <CardDeck className="myCardDeck">
-                        {inf}
-                    </CardDeck>
+                    <h1 className="glowing">About us</h1>
                 </div>
-                <Jumbotron className="myAboutUs">
+                <div className="myAboutUs">
+
                     <div className="myContent">
                         <h3 className="myTitles">Historia de origen</h3>
+                        <br/>
                         <p>
                             RecipEat es una aplicación que como otras aplicaciones nació de una necesidad.
                             El propósito principal es sugerirle al usuario recetas fáciles y deliciosas
@@ -62,44 +84,27 @@ class Content extends React.Component {
                             mundialmente. Sin embargo, esta está abierta a personas de todos los rincones
                             del mundo.
                         </p>
+                        <br/>
+                        <br/>
+                        <div className="myTitles">
+                            <h3 style={{color: "royalblue"}}>Front End</h3>
+                            <CardDeck className="myCardDeck">
+                                {front}
+                            </CardDeck>
+                            <h3 style={{color: "palevioletred"}}>Back End</h3>
+                            <CardDeck className="myCardDeck">
+                                {back}
+                            </CardDeck>
+                        </div>
+                        <br/>
                     </div>
 
-                </Jumbotron>
+                </div>
             </div>
         )
     }
 }
 
-/*class Content extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-
-        }
-    }
-
-    render() {
-        return(
-            <div>
-                <header className="navbar hero" role="banner">
-                    <div className="container">
-                        <div className="navbar-header">
-                            <a href="#" className="navbar-brand">
-                                <p>
-                                    <img
-                                        src={logo}
-                                    />
-                                    RecipEat
-                                </p>
-                            </a>
-
-                        </div>
-                    </div>
-                </header>
-            </div>
-        )
-    }
-}*/
 
 class AboutUs extends React.Component {
     render() {

@@ -6,6 +6,10 @@ import './css/myDetailRecipe.css';
 
 function DetailRecipe(props) {
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     const tData = JSON.parse(localStorage.getItem('tData'))
 
     return (

@@ -75,6 +75,7 @@ export default function ResPage() {
                     totalTime = {item.recipe.totalTime}
                     source = {item.recipe.source}
                     ingredients= {item.recipe.ingredientLines}
+                    saveData = {saveData}
                 />)}
             </CardDeck>
         </div>

@@ -1,4 +1,4 @@
-import React, {Component, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import ReactPaginate from 'react-paginate';
 import PopOutCard from "./components/PopOutCard"
 import { CardDeck } from 'react-bootstrap';
@@ -11,6 +11,7 @@ export default function ResPage() {
     const [recipes, setRecipes] = useState([])
     const [search, setSearch] = useState("")
     const [query, setQuery] = useState("")
+
 
     useEffect(() => {
         const savedData = localStorage.getItem('query')

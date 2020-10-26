@@ -3,6 +3,8 @@ import ReactPaginate from 'react-paginate';
 import PopOutCard from "./components/PopOutCard"
 import { CardDeck } from 'react-bootstrap';
 import "./css/myResultPage.css";
+import "./css/styles.scss";
+import { CardDeck } from 'react-bootstrap';
 
 export default function ResPage() {
     const APP_ID = "a2799540"

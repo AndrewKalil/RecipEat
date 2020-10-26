@@ -16,13 +16,13 @@ const InfoJason = [
     {
         id: 2,
         name: "Adrian",
-        fullName: "Adrian De La Asnsion Vuelvas",
+        fullName: "Adrian De La Asuncion Buelvas",
         text: "",
         image: "https://intranet.hbtn.io/users/profile_pic/99c72903e304369daffb1fd1537dad1a",
         twitter: "",
         linkedin: "",
         github: "",
-        email: "",
+        email: "delaasuncionbuelvasadrian@gmail.com",
         especialities: "",
         education: [],
         member: "Front-End"

@@ -1,6 +1,7 @@
 $size: 100%;
 $ty-display: flex;
-
+@import url('https://fonts.googleapis.com/css?family=Sofia');
+@import url('https://fonts.googleapis.com/css?family=Croissant One');
 html {
     height: $size;
 }
@@ -34,4 +35,4 @@ body {
 @import "components/home-styles";
 @import "components/footer-styles";
 @import "components/animations-styles";
-@import "components/button-styles";
+@import "components/login-styles";

@@ -3,7 +3,7 @@ $color: #ffff;
 $font-size: 16px;
 $font: "Sofia", Serif;
 $shadow: 0 2px 2px 0 rgba(70, 69, 69, 0.37);
-@import url('https://fonts.googleapis.com/css?family=Sofia');
+
 
 
 nav {
@@ -25,12 +25,9 @@ nav {
             display: flex;
             justify-content: center;
         }
-        .logo {
-            width: 40px;
-            border-radius: 50%;
-            background-color: $color;
+        .logo { 
+            background: none;
             align-items: center;
-            box-shadow: $shadow;
         }
         .search {
             align-items: center;
@@ -49,6 +46,9 @@ nav {
                 box-sizing: border-box;
                 flex: 1 1 auto;
                 box-shadow: $shadow;
+                &:hover {
+                    border: 1px solid $color;
+                }
             }
             .box-ico {
                 margin-right: 8px;
@@ -108,10 +108,10 @@ nav {
         color: #333;
         text-decoration: none;
     }
-}
-.items:hover {
-    background-color: #efefef;
-    box-shadow: $shadow;
+    &:hover {
+        background-color: #efefef;
+        box-shadow: $shadow;
+    }
 }
 
 .menu-icon {
@@ -134,15 +134,19 @@ nav {
     color: #767676;
     border: none;
     box-shadow: 0 3px 2px 0 rgba(70, 69, 69, 0.37);
+    &:hover {
+        padding: 8px 10px;
+        transition: all 0.3s ease-out;
+        background: $color;
+        color: #3acbf7;
+        transition: 250ms;
+    }
 } 
-.btn:hover {
-    padding: 8px 10px;
-    transition: all 0.3s ease-out;
-    background: $color;
-    color: #3acbf7;
-    transition: 250ms;
+.btn-log {
+    text-decoration: none;
 }
-@media screen and (max-width: 960px) {
+
+@media only screen and (max-width: 960px) {
     nav {
         position: relative;
     }
@@ -182,10 +186,9 @@ nav {
         background-color: #efefef;
     }
     .logo {
-        position: absolute;
         top: 0;
         left: 0;
-        transform: translate(25%, 50%);
+        width: 80%;
     }
     .menu-icon {
         display: flex;
@@ -217,13 +220,12 @@ nav {
         background-color: #3acbf7;
         color: #767676;
         border: none;
+        &:hover {
+            padding: 8px 10px;
+            transition: all 0.3s ease-out;
+            background: $color;
+            color: #3acbf7;
+            transition: 250ms;
+        }
     } 
-    .btn:hover {
-        padding: 8px 10px;
-        transition: all 0.3s ease-out;
-        background: $color;
-        color: #3acbf7;
-        transition: 250ms;
-    }
-
 }

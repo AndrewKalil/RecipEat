@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import './css/styles.scss';
-import logo from './assets/img/recipEat.png';
+import logo from './assets/img/RecipEAT.svg';
 import MenuItems from './components/MenuItems';
 import Search from './components/search';
 import { Button } from './components/Button';
-
-import AboutUs from './AboutUs';
-import ResPage from "./ResPage";
-
 
 class Header extends Component {
   state = { clicked: false }
@@ -20,9 +16,9 @@ class Header extends Component {
 	  return (
       <nav>
         <div className="navBar">
-          <a className="log-url" href="#">
+          <Link className="log-url" to="/">
             <img className="logo" src={ logo }/>
-          </a>
+          </Link>
           <Search />
           <div className="menu-icon" onClick={ this.handleClick }>
             <i className={ this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
@@ -36,7 +32,7 @@ class Header extends Component {
               </li>
               )
             })}
-            <Button> Login</Button>
+            <Button><Link className="btn-log" to="/login"> Login</Link></Button>
           </ul>
         </div>
       </nav>

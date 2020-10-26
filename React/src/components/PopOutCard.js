@@ -1,36 +1,41 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { Component, useEffect, useState } from "react"
+import {Link} from "react-router-dom"
 
-class PopOutCard extends React.Component {
-    render() {
-        return (
-            <div className="myRcard">
-                <div>
-                    <img src={this.props.img} alt="" className="myRcardImg"/>
+function PopOutCard (props){
+    const importedData = props
+
+    return (
+        <div className="myRcard">
+            <div>
+                <img src={props.image} alt="" className="myRcardImg"/>
+            </div>
+            <div className="myRcardTitleandClock">
+                <div className="myRcardTitle">
+                    <p>{props.label}</p>
+                    <p>by: {props.source}</p>
                 </div>
-                <div className="myRcardTitleandClock">
-                    <div className="myRcardTitle">
-                        <p>{this.props.label}</p>
-                        <p>by: {this.props.source}</p>
-                    </div>
-                    <div className="myClock">
-                        <div>{this.props.time}</div>
-                    </div>
-                </div>
-                <div className="myRcardText">
-                    <p>{this.props.text}</p>
-                </div>
-                <div className="myRcardButton">
-                    <Link to={{
-                        pathname: '/detail',
-                        tData: this.props
-                    }}>
-                        <p>Ir!</p>
-                    </Link>
+                <div className="myClock">
+                    <div>{props.totalTime}</div>
                 </div>
             </div>
-        )
-    }
+            <div className="myRcardText">
+                <p>{props.text}</p>
+            </div>
+            <div className="myRcardBottom">
+                <Link to={{
+                    pathname: '/detail',
+                    tData: importedData
+                }}
+                >
+                    <button
+                        className="btn myRcardButton"
+                        onClick={() => props.saveData(importedData)}
+                    >
+                    Ir</button>
+                </Link>
+            </div>
+        </div>
+    )
 }
 
 export default PopOutCard

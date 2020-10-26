@@ -5,6 +5,10 @@ import hat from './assets/img/chef-hat.svg';
 import './css/styles.scss';
 
 class Home extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+    localStorage.setItem('query', JSON.stringify(""))
+}
   render() {
     return (
       <div className="container">

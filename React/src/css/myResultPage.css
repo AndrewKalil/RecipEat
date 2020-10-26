@@ -1,6 +1,6 @@
 .myRpage {
     width: 100%;
-    height: 100%;
+    min-height: 730px;
     background-color: white;
     margin: 0;
 }
@@ -25,7 +25,7 @@
 .myRcard {
     height: 430px;
     width: 340px;
-    background-color: lavender;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     margin: 35px 30px 35px 30px;
     position: relative;
     transition: transform 0.7s;
@@ -38,14 +38,13 @@
 
 .myRcard:hover {
     transform: scale(1.15);
-    cursor: pointer;
 }
 
 .myRcardImg {
     width: 100%;
     margin: auto;
     height: 200px;
-    background-color: lightseagreen;
+    background-color: whitesmoke;
     border-radius: 10px;
 }
 
@@ -69,6 +68,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 14px;
+    color:  black;
 
 }
 
@@ -79,6 +79,7 @@
     margin-left: 25px;
     margin-right: 5px;
     margin-top: 5px;
+    padding-top: 5px;
 }
 
 .myClock > div {
@@ -86,12 +87,15 @@
     width: 40px;
     margin: auto;
     text-align: center;
-    color: black;
     font-weight: bolder;
     align-items: center;
     justify-content: center;
     margin-top: 25px;
     padding-right: 9px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 14px;
+    color:  black;
 }
 
 .myRcardText {
@@ -106,23 +110,33 @@
     font-size: 13px;
 }
 
-.myRcardButton {
-    width: 25%;
-    margin: auto;
-    margin-top: 15px;
-    background-color: lightblue;
-    height: 10%;
+.myRcardBottom{
     align-content: center;
-    text-align: center;
-    padding-top: 6px;
-    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+
+}
+.myRcardBottom > a{
+    text-decoration: none;
 }
 
-.myRcardButton > p{
+.myRcardButton {
+    width: 65px;
+    height: 35px;
+    align-self: center;
+    font-weight: bolder;
+    font-size: medium;
+    text-align: center;
+    color: white;
+    background-color: darkcyan;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: large;
 }
+
+.myRcardButton:hover {
+    cursor: pointer;
+    transition: ease-in-out;
+}
+
 
 /*_______________________________________END OF CARD____________________________________*/
 
@@ -156,7 +170,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #d3d3d3;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     border-radius: 0.5rem;
     margin-bottom: 5rem;
     box-shadow: 1rem 2rem 5rem #aaa;
@@ -181,8 +195,9 @@
 .search-form input[type="submit"] {
     width: 25%;
     text-transform: uppercase;
-    background-color: #40b48e;
-    color: #fff;
+    background-color: darkcyan;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .formDiv {
@@ -241,4 +256,6 @@
 }
 .pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
     border-radius: unset
+
 }
+/*                                             END                                             */

@@ -3,6 +3,7 @@ import axios from 'axios';
 import PopOutCard from "../components/PopOutCard";
 import ResPage from "../ResPage";
 import '../css/styles.scss';
+import { Link } from 'react-router-dom';
 
 class Search extends Component {
   constructor(props) {
@@ -100,8 +101,11 @@ handleSubmit(e) {
                   <input type="text" className="input-search" name="SearchInput" placeholder="Search" 
                   width="100%" height="100%" onChange={this.handleChange}
                   value={this.state.search}/>
-                  {console.log(this.state.search)}
                 </div>
+                <Link to="/result" type="submit">
+                    <input type="submit" value="search" />
+                </Link>
+                {console.log(this.state.search)}
               </div>
               </form>
               <ResPage ResultSearch={this.state.postData} />

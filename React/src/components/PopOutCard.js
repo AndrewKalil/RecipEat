@@ -29,7 +29,7 @@ function PopOutCard (props){
                 >
                     <button
                         className="btn myRcardButton"
-                        onClick={() => props.saveData(importedData)}
+                        onClick={() => props.saveData('tData', importedData)}
                     >
                     Ir</button>
                 </Link>

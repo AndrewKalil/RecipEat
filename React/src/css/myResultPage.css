@@ -18,6 +18,7 @@
     -webkit-display: flex;
     flex-wrap: wrap;
     margin: 0;
+    margin-top: 0.5rem;
 }
 
 /*-----------------------------------------THE CARD ITSELF------------------------------------*/
@@ -172,7 +173,6 @@
     align-items: center;
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     border-radius: 0.5rem;
-    margin-bottom: 5rem;
     box-shadow: 1rem 2rem 5rem #aaa;
     position: relative;
 }
@@ -182,14 +182,15 @@
     border: none;
     border-bottom: 0.1rem solid #ccc;
     margin: 0 0.5rem;
-    border-radius: 0.5rem;
     height: 3rem;
 }
 
 .search-form input[type="text"] {
     padding: 0 0.5rem;
+    margin-right: 0;
     width: 60%;
     color: #555;
+    border-radius: 10px;
 }
 
 .search-form input[type="submit"] {
@@ -198,14 +199,42 @@
     background-color: darkcyan;
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
 }
+
+.search-form input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: rgb(98, 170, 170);
+}
+
+.addButton {
+    width: 7%;
+    height: 48px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    background-color: rgb(201, 100, 100);
+    color: black;
+    margin-top: 0;
+    margin-left: 0.5rem;
+    border-radius: 10px;
+    border: 0;
+}
+
+.addButton:hover {
+    cursor: pointer;
+    background-color: floralwhite;
+
+}
+
 
 .formDiv {
     align-items: center;
     justify-content: center;
     width: 100%;
     display: flex;
+    flex-direction: column;
     margin-top: 20px;
+
 }
 
 .buttonSection {

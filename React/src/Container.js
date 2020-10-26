@@ -5,6 +5,8 @@ import Home from "./Home";
 import AboutUs from "./AboutUs";
 import ResPage from "./ResPage";
 import DetailRecipe from "./DetailRecipe";
+import LoginReg from "./Login";
+import Recipe from "./Recipe";
 
 
 function Container({ location }) {
@@ -17,6 +19,8 @@ function Container({ location }) {
                     <Route path='/about' component={AboutUs} />
                     <Route path='/respage' component={ResPage} />
                     <Route path='/detail' component={DetailRecipe} />
+                    <Route path='/login' component={LoginReg} />
+                    <Route path='/agregarReceta' component={Recipe} />
                 </Switch>
             </CSSTransition>
         </TransitionGroup>

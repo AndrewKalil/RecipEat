@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import coock from './assets/img/cloche.svg';
 import hat from './assets/img/chef-hat.svg';
 import './css/styles.scss';
@@ -8,7 +9,7 @@ class Home extends Component {
     return (
       <div className="container">
         <section>
-          <div className="section-main">
+          <div className="section-main section-m">
             <div className="column-one">
               <h1 className="text-main">
                 Prepara Tus Recetas.
@@ -18,6 +19,7 @@ class Home extends Component {
               </h1>
               <p className="text-p">Puedes encontrar variedad de recetas solo con los ingredientes que tengas a la mano.
               </p>
+              <Link className="btn-more" to="/login">Registrarse</Link>
             </div>
             <div className="column-two">
               <div className="column-img">
@@ -50,7 +52,7 @@ class Home extends Component {
           </div>
         </section>
         <section>
-          <div className="section-main">
+          <div className="section-m section-sub1">
             <div className="column-one">
               <div className="column-img">
                 <img src="https://i.imgur.com/dqOYfpi.jpg"/>
@@ -83,15 +85,15 @@ class Home extends Component {
               <h5 className="text-date">
                 Comenzando Desde 2020
               </h5>
-              <h1 className="text-main">
+              <h2 className="text-main">
                 Te ayudamos a preparar lo que mas te gusta.
                 <span className="text-span">
                   Encuentra lo que Deseas.
                 </span>
-              </h1>
+              </h2>
               <p className="text-p">Nuestra mision es ayudarte a encontrar que preparar solo con los ingredientes que tengas a la mano.
               </p>
-              <a className="btn-see-more">Ver Mas</a>
+              <a className="btn-more">Ver Mas</a>
             </div>
           </div>
         </section>
@@ -127,19 +129,29 @@ class Home extends Component {
           </div>
         </section>
         <section>
-          <div className="section-main">
+          <div className="section-m section-sub2">
             <div className="column-one">
-              <h1 className="text-main">
-                Porque Elegirnos?.
+              <h2 className="text-main">
+                Porque
                 <span className="text-span">
-                  Encuentra lo que Deseas.
-                  </span>
-              </h1>
+                  Elegirnos?
+                </span>
+              </h2>
               <p className="text-p">Porque tenemos una gran variedad de Recetas y nuestra interfaz esta pensada en hacer
               que cualquier usario pueda usarla, los usuarios pueden realizar calificaciones, pueden agregar se propias
               recetas, entre otras cosas.
               </p>
-              <a className="btn-see-more">Comenzar</a>
+              <div className="box-cust">
+                <div className="box-text-cust">
+                  <div className="text1-cust">3000+</div>
+                  <div className="text2-cust">Recetas</div>
+                </div>
+                <div className="box-text-cust">
+                  <div className="text1-cust">100+</div>
+                  <div className="text2-cust">Usuarios</div>
+                </div>
+              </div>
+              <a className="btn-more">Comenzar</a>
             </div>
             <div className="column-two">
               <div className="column-img">

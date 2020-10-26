@@ -1,6 +1,7 @@
 /* Footer */
 $size-1: 100%;
 $size: 20px;
+$margin: 1rem;
 
 .footer {
     display: flex;
@@ -60,4 +61,19 @@ $size: 20px;
 }
 .copyR {
     text-align: center;
+}
+
+@media screen and (max-width: 660px) {
+    .box-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        & p {
+            margin-top: $margin;
+        }
+        & .net-footer {
+            margin-top: $margin;
+        }
+    }
 }
